@@ -1,0 +1,48 @@
+<mvc:View controllerName="com.airdit.LiveCodeEditor.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:l="sap.ui.layout" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Live Code Editor">
+					<headerContent>
+						<Button icon="sap-icon://begin" text="Run" press="onPressRun" type="Emphasized"/>
+					</headerContent>
+					<content>
+						<l:Splitter orientation="Vertical">
+							<l:Splitter>
+								<l:layoutData>
+									<l:SplitterLayoutData size="50%"/>
+								</l:layoutData>
+								<l:contentAreas>
+									<TextArea id="html" placeholder="Type HTML here...." width="100%" height="97.5%">
+										<layoutData>
+											<l:SplitterLayoutData size="33%"/>
+										</layoutData>
+									</TextArea>
+									<TextArea id="css" placeholder="Type Css here...." width="100%" height="97.5%">
+										<layoutData>
+											<l:SplitterLayoutData size="33%"/>
+										</layoutData>
+									</TextArea>
+									<TextArea id="js" placeholder="Type Javascript code here...." width="100%" height="97.5%">
+										<layoutData>
+											<l:SplitterLayoutData size="33%"/>
+										</layoutData>
+									</TextArea>
+								</l:contentAreas>
+							</l:Splitter>
+							<l:Splitter>
+								<l:layoutData>
+									<l:SplitterLayoutData size="50%"/>
+								</l:layoutData>
+								<l:contentAreas>
+									<html:iframe id="output" height="100%" width="100%"/>
+								</l:contentAreas>
+							</l:Splitter>
+						</l:Splitter>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
